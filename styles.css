@@ -63,6 +63,9 @@ body {
     left: 0;
     z-index: 1;
 }
+.bg-starts img {
+    width: 100%;
+}
 .launch__inner {
     padding: 1rem;
     padding-top: 8rem;
