@@ -1,0 +1,162 @@
+:root {
+/* ### Primary */
+
+--Grayish-blue: hsl(237, 18%, 59%);
+--Soft-red: hsl(345, 95%, 68%);
+
+/* ### Neutral */
+
+--white: #fff;
+--Dark-desaturated-blue: hsl(236, 21%, 26%);
+--Very-dark-blue: hsl(235, 16%, 14%);
+--Very-dark-blue-black: hsl(234, 17%, 12%); 
+/* (mostly black)  */
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+html {
+    font-family: 'Red Hat Text', sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    color: white;
+    text-align: center;
+}
+
+/* TODO-- what is the best way to resolve this? need to manage varius layers */
+.container {
+    min-width: 375px;
+    width: 100vw;
+    height: 100vh;
+    /* background-image: url('./images/bg-stars.svg');
+    background-size: cover;
+    background-repeat: no-repeat; */
+    background: var(--Very-dark-blue);
+}
+
+
+/* WORKING NOW */
+.launch {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    position: relative;
+    z-index: 2;
+    
+}
+.bg-stars {
+    width: 100%;
+    height: 100%;
+    background-image: url('./images/bg-stars.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    opacity: .8;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.launch__inner {
+    padding: 1rem;
+}
+
+h1 {
+    font-size: 1.5rem;
+    letter-spacing: 4px;
+}
+
+.launch__numbers {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+    z-index: 10;
+}
+
+.launch__numbers__box {
+    width: 23%;
+}
+
+.num {
+    border-radius: .5rem;
+}
+
+.num__top, .num__bottom {
+    border-radius: .3rem;
+    font-size: 3rem;
+    height: 40px;
+    position: relative;
+    overflow: hidden;
+    background: var(--Dark-desaturated-blue);
+    color: var(--Soft-red);
+}
+
+.num__top {
+    opacity: .8;
+}
+
+
+.num__hide--top {
+    position: relative;
+    top: 14px;
+
+}
+.num__hide--bottom {
+    position: relative;
+    top: -28px;
+    
+
+}
+
+.divider {
+    width: 100%;
+    height: 1px;
+    background: var(--Very-dark-blue);
+    position: relative;
+}
+.divider::before {
+    position: absolute;
+    left: -6px;
+    top: -3px;
+    content: '';
+    padding: 4px;
+    background: var(--Very-dark-blue);
+    border-radius: 50%;
+}
+.divider::after {
+    position: absolute;
+    right: -5px;
+    top: -3px;
+    content: '';
+    padding: 4px;
+    background: var(--Very-dark-blue);
+    border-radius: 50%;
+}
+
+.label {
+    font-size: .6rem;
+    letter-spacing: 1px;
+    color: var(--Grayish-blue);
+}
+
+
+
+/* WORKING NOW */
+
+
+
+
+/* TODO-- */
+.social {
+    background-image: url('./images/pattern-hills.svg');
+    background-repeat: no-repeat; 
+    background-position-x: -580px;
+    background-size: cover;
+    height: 150px;
+    z-index: 10;
+}
