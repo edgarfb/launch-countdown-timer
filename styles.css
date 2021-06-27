@@ -170,6 +170,11 @@ h1 {
     margin: 1rem;
 }
 
+.change {
+    transform-origin: bottom;
+    transform: rotateX(49deg);
+}
+
 @media (min-width:600px) {
 
     .launch__inner {
