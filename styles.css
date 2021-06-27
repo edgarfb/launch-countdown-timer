@@ -52,6 +52,7 @@ body {
 }
 .bg-stars {
     width: 100%;
+    overflow: hidden;
     /* height: 200px;
     background-image: url('./images/bg-stars.svg');
     background-size: cover;
