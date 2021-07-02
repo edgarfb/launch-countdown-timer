@@ -49,6 +49,7 @@ body {
     position: relative;
     
     
+    
 }
 .bg-stars {
     width: 100%;
@@ -70,6 +71,8 @@ body {
     padding: 1rem;
     padding-top: 8rem;
     z-index: 100;
+    max-width: 1440px;
+    margin: 0 auto;
 }
 
 h1 {
@@ -204,6 +207,7 @@ h1 {
 @media (min-width:600px) {
     .num__main {
         font-size: 6rem;
+        padding: 2rem 0;
     }
 
     .launch__inner {
