@@ -14,7 +14,7 @@ console.log(darkLayer);
 let timer = setInterval(handleSeconds, 1000);
 
 
-
+// add the contend to all num container
 num[0].textContent = days;
 num[1].textContent = hours;
 num[2].textContent = minutes;
@@ -35,20 +35,7 @@ function handleSeconds() {
     target.textContent = seconds;
     seconds -= 1;
     target.textContent = seconds;
-    // handleChange(index);
 }
-
-
-// NOT WORKING YET
-// function handleChange(index) {
-//     setTimeout(() => {
-//         darkLayer[index].classList.add('change');
-//         setTimeout(() => {
-//             darkLayer[index].classList.remove('change');
-//         }, 500);
-//     }, 500);
-    
-// }
 
 function handleMinutes() {
     if(minutes === 0) {

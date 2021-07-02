@@ -27,15 +27,10 @@ body {
     color: white;
     text-align: center;
 }
-
-/* TODO-- what is the best way to resolve this? need to manage varius layers */
 .container {
     min-width: 375px;
     width: 100vw;
     height: 100vh;
-    /* background-image: url('./images/bg-stars.svg');
-    background-size: cover;
-    background-repeat: no-repeat; */
     background: var(--Very-dark-blue);
 }
 
@@ -54,10 +49,6 @@ body {
 .bg-stars {
     width: 100%;
     overflow: hidden;
-    /* height: 200px;
-    background-image: url('./images/bg-stars.svg');
-    background-size: cover;
-    background-repeat: repeat; */
     position: absolute;
     opacity: .8;
     top: 0;
@@ -148,30 +139,6 @@ h1 {
 }
 
 
-
-/* NOT WORKING YET :( */
-/* .change {
-    transform: rotateX(0deg);
-    transform-origin: bottom;
-    animation-name: change;
-    animation-duration: .7s;
-    animation-fill-mode: forwards;
-}
-
-@keyframes change {
-    0% {
-        transform: rotateX(30deg);
-        opacity: .3;
-    }
-    50% {
-        transform: rotateX(180deg);
-        opacity: 5;
-    }
-} */
-
-
-
-/* WORKING NOW */
 
 
 
