@@ -1,42 +1,41 @@
-let numTop = document.querySelectorAll('.num__hide--top');
-let numBottom = document.querySelectorAll('.num__hide--bottom');
+
 let days = 8,
     hours = 23,
     minutes = 51,
-    seconds = 43
-
+    seconds = 4
 ;
+
+let num = document.querySelectorAll('.num__main');
+
+
+
 let timer = setInterval(handleSeconds, 1000);
-numTop[0].innerHTML = days;
-numBottom[0].innerHTML = days;
-
-numTop[1].innerHTML = hours;
-numBottom[1].innerHTML = hours;
-
-numTop[2].innerHTML = minutes;
-numBottom[2].innerHTML = minutes;
-
-numTop[3].innerHTML = seconds;
-numBottom[3].innerHTML = seconds;
-
-console.log('Top',numTop);
-console.log('Bottom', numBottom);
 
 
+
+num[0].textContent = days;
+num[1].textContent = hours;
+num[2].textContent = minutes;
+num[3].textContent = seconds;
 
 function handleSeconds() {
+    let target = num[3];
+    let index = 3;
+    
+    
     if(seconds === 0) {
         handleEnd();
         handleMinutes();
-        console.log('I am zero')
-        seconds = 60;
+        seconds = 60
         
     }
     
+    target.textContent = seconds;
     seconds -= 1;
-    numTop[3].innerHTML = seconds;
-    numBottom[3].innerHTML = seconds;
+    target.textContent = seconds;
 }
+
+
 
 function handleMinutes() {
     if(minutes === 0) {
@@ -45,8 +44,7 @@ function handleMinutes() {
         
     }
     minutes -= 1;
-    numTop[2].innerHTML = minutes;
-    numBottom[2].innerHTML = minutes;
+    num[2].textContent = minutes;
 }
 
 function handleHours() {
@@ -55,8 +53,7 @@ function handleHours() {
         handleDays();
     }
     hours -= 1;
-    numTop[1].innerHTML = hours;
-    numBottom[1].innerHTML = hours;
+    num[1].textContent = hours;
 }
 
 function handleDays() {
@@ -64,8 +61,7 @@ function handleDays() {
         return;
     }
     days -= 1;
-    numTop[0].innerHTML = days;
-    numBottom[0].innerHTML = days;
+    num[0].textContent = days;
 }
 
 
@@ -74,9 +70,3 @@ function handleEnd() {
         clearInterval(timer);
     }
 }
-
-numTop[3].addEventListener('change', (e) => {
-    console.log(e);
-})
-
-// setInterval(handleSeconds, 1000);
